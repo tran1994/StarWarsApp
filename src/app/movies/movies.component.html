@@ -1,0 +1,48 @@
+
+
+
+<p>All Star Wars  movies</p>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Title</th>
+    <th scope="col">Episode ID</th>
+    <th scope="col">Opening</th>
+    <th scope="col">Director</th>
+    <th scope="col">Producer</th>
+    <th scope="col">Release Date</th>
+    <th scope="col">Charcters</th>
+    <th scope="col">Planets</th>
+    <th scope="col">Starships</th>
+    <th scope="col">Vehciles</th>
+    <th scope="col">Species</th>
+
+  </thead>
+  <tbody>
+  <tr *ngFor="let y of x; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+   
+      {{ y.title }}
+    </td>
+    <td>{{ y.episode_id }}</td>
+    <td>{{ y.opening_crawl }}</td>
+    <td>{{ y.director }}</td>
+    <td>{{ y.producer }}</td>
+    <td>{{ y.release_date }}</td>
+    <td>{{ y.characters  }}</td>
+    <td>{{ y.planets  }}</td>
+    <td>{{ y.starships }}</td>
+    <td>{{ y.vehicles }}</td>
+    <td>{{ y.species }}</td>
+
+
+
+
+  </tr>
+  </tbody>
+</table>
+<div *ngIf="showLoading" >
+  <app-spinner-component></app-spinner-component>
+</div>

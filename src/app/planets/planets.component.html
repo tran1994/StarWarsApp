@@ -1,0 +1,49 @@
+<p>All planets within Star Wars Universe</p>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Rotation Period</th>
+    <th scope="col">Orbital Period</th>
+    <th scope="col">Diameter</th>
+    <th scope="col">Climate</th>
+    <th scope="col">Gravity</th>
+    <th scope="col">Terrain</th>
+    <th scope="col">Surface Water</th>
+    <th scope="col">Population</th>
+    <th scope="col">Residents</th>
+    <th scope="col">Films</th>
+  
+
+  </thead>
+  <tbody>
+  <tr *ngFor="let y of x; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+   
+      {{ y.name }}
+    </td>
+    <td>{{ y.rotation_period }}</td>
+    <td>{{ y.orbital_period }}</td>
+    <td>{{ y.diameter }}</td>
+    <td>{{ y.climate }}</td>
+    <td>{{ y.gravity }}</td>
+    <td>{{ y.terrain  }}</td>
+    <td>{{ y.surface_water  }}</td>
+    <td>{{ y.population }}</td>
+    <td>{{ y.residentss }}</td>
+    <td>{{ y.films }}</td>
+
+
+
+
+  </tr>
+  </tbody>
+</table>
+
+
+<div *ngIf="showLoading">
+  <app-spinner-component></app-spinner-component>
+</div>
